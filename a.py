@@ -1,5 +1,6 @@
 import tkinter
 import tkinter.messagebox
+from game import TicTacToe
 root = tkinter.Tk()
 root.title("Cute_game_login")
 root.geometry('600x400')
@@ -12,6 +13,8 @@ def login_button():
     password = password_var.get()
     if(username == "admin" and password == "1234"):
         tkinter.messagebox.showinfo("Login", "Successful")
+        TicTacToe(root)
+        root.destroy()
     else:
         tkinter.messagebox.showerror("Login", "Login Failed")
 
