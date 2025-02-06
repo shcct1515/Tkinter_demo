@@ -13,7 +13,8 @@ def login_button():
     password = password_var.get()
     if(username == "admin" and password == "1234"):
         tkinter.messagebox.showinfo("Login", "Successful")
-        TicTacToe(root)
+        windowgame = tkinter.Tk()
+        TicTacToe(windowgame)
         root.destroy()
     else:
         tkinter.messagebox.showerror("Login", "Login Failed")
